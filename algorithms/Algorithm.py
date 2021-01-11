@@ -303,6 +303,8 @@ class Algorithm():
         self.bnumber = len(data_loader())
         for idx, batch in enumerate(tqdm(data_loader(epoch))):
             self.biter = idx # batch iteration.
+
+            print(self.curr_epoch, len(data_loader), self.biter)
             self.global_iter = self.curr_epoch * len(data_loader) + self.biter
             train_stats_this = self.train_step(batch)
             train_stats.update(train_stats_this)
