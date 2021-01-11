@@ -137,7 +137,7 @@ class FewShot(Algorithm):
         #************************** COMPUTE LOSSES *****************************
         loss_cls_all = criterion(cls_scores_var, labels_test_var)
         loss_total = loss_cls_all
-        loss_record['loss'] = loss_total.data[0]
+        loss_record['loss'] = loss_total.item()
         loss_record['AccuracyBase'] = top1accuracy(
             cls_scores_var.data, labels_test_var.data)
         #***********************************************************************
@@ -236,7 +236,7 @@ class FewShot(Algorithm):
         #************************* COMPUTE LOSSES ******************************
         loss_cls_all = criterion(cls_scores_var, labels_test_var)
         loss_total = loss_cls_all
-        loss_record['loss'] = loss_total.data[0]
+        loss_record['loss'] = loss_total.item()
 
         if self.nKbase > 0:
             loss_record['AccuracyBoth'] = top1accuracy(
