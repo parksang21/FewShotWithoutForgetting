@@ -464,7 +464,7 @@ class FewShotDataloader():
         return self.get_iterator(epoch)
 
     def __len__(self):
-        return (self.epoch_size / self.batch_size)
+        return int(self.epoch_size / self.batch_size)
 
 
 class ImageNetLowShot(data.Dataset):
@@ -594,7 +594,7 @@ class SimpleDataloader():
         return self.get_iterator()
 
     def __len__(self):
-        return (self.epoch_size / self.batch_size)
+        return int(self.epoch_size / self.batch_size)
 
 
 class ImageNetLowShotFeaturesLegacy():
