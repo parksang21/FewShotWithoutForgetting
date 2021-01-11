@@ -203,7 +203,7 @@ class FewShotDataloader():
                  nTestNovel=15*5, # number of test examples for all the novel categories.
                  nTestBase=15*5, # number of test examples for all the base categories.
                  batch_size=1, # number of training episodes per batch.
-                 num_workers=4,
+                 num_workers=2,
                  epoch_size=2000, # number of batches per epoch.
                  ):
 
@@ -569,7 +569,7 @@ class ImageNet(data.Dataset):
 
 
 class SimpleDataloader():
-    def __init__(self, dataset, batch_size, num_workers=4):
+    def __init__(self, dataset, batch_size, num_workers=2):
         self.dataset = dataset
         self.batch_size = batch_size
         self.num_workers = num_workers
@@ -727,7 +727,7 @@ class LowShotDataloader():
         dataset_evaluation,
         nExemplars=1,
         batch_size=1,
-        num_workers=4):
+        num_workers=2):
 
         self.nExemplars = nExemplars
         self.batch_size = batch_size
@@ -893,7 +893,7 @@ class LowShotDataloaderLegacy():
         dataset_evaluation,
         nExemplars=1,
         batch_size=1,
-        num_workers=4):
+        num_workers=2):
 
         self.dataset_train_novel  = dataset_train_novel
         self.dataset_evaluation = dataset_evaluation
