@@ -3,3 +3,6 @@ datasets
 *~
 *.pyc
 data/*/
+docker.sh
+ml_workspace.sh
+.idea/

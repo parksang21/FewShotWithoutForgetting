@@ -25,8 +25,8 @@ from pdb import set_trace as breakpoint
 
 
 # Set the appropriate paths of the datasets here.
-_MINI_IMAGENET_DATASET_DIR = './datasets/MiniImagenet'
-_IMAGENET_DATASET_DIR = './datasets/IMAGENET/ILSVRC2012'
+_MINI_IMAGENET_DATASET_DIR = '/datasets/MiniImagenet'
+_IMAGENET_DATASET_DIR = '/datasets/IMAGENET/ILSVRC2012'
 
 _IMAGENET_LOWSHOT_BENCHMARK_CATEGORY_SPLITS_PATH = './data/IMAGENET_LOWSHOT_BENCHMARK_CATEGORY_SPLITS.json'
 
