@@ -149,6 +149,7 @@ class ImageNetLowShotExperiments(FewShot):
         #***********************************************************************
         #******************** EXTRACT FEATS FROM EXEMPLARS *********************
         batch_size, num_train_examples, channels, height, width = images_var.size()
+        print(images_var.shape)
         features_train = feat_model(images_var.view(
             batch_size * num_train_examples, channels, height, width))
         features_train = features_train.view(
